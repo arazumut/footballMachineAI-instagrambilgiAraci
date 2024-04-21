@@ -4,3 +4,8 @@
 
 ![Ekran görüntüsü 2024-03-30 175040](https://github.com/arazumut/footballMachineAI/assets/150933483/5fafef37-6e2f-436f-9b71-1f4044c182b2)
 ![Ekran görüntüsü 2024-03-30 175128](https://github.com/arazumut/footballMachineAI/assets/150933483/5de3273f-544a-4b34-aff6-64a6d5afff0f)
+
+<h1>instagram adresinden bilgi çeker. takipçi sayısı,takip sayısı ve post sayısını gösterir.</h1>
+
+![Ekran görüntüsü 2024-04-21 171629](https://github.com/arazumut/footballMachineAI-instagrambilgiAraci/assets/150933483/536553ba-d4f2-4a37-92c7-7ccf3ce3c74d)
+
