@@ -33,7 +33,25 @@ Son olarak, Matplotlib kullanarak verilerin görselleştirilmesi yapılır. graf
 ![Ekran görüntüsü 2024-05-28 120825](https://github.com/arazumut/footballMachineAI-instagrambilgiAraci/assets/150933483/f8d9aaec-2109-4c1c-8456-78e9accdfe64)
 
 
-<h1>instagram adresinden bilgi çeker. takipçi sayısı,takip sayısı ve post sayısını gösterir.</h1>
+Proje Adı: Instagram Bilgi Çekici
+
+Amaç: Instagram kullanıcılarının takipçi sayısı, takip edilen sayısı ve gönderi sayısı gibi temel bilgilerini çekmek ve göstermek.
+
+Kullanılan Teknolojiler:
+
+    Python
+    Tkinter: GUI oluşturmak için kullanıldı.
+    BeautifulSoup: HTML verilerini pars etmek için kullanıldı.
+    urllib.request: HTTP isteği yapmak için kullanıldı.
+
+Adımlar:
+
+    Tkinter Penceresi Oluşturma: Kullanıcı adı girişi, bilgi çekme butonu ve sonuç etiketleri eklendi.
+    Web Scraping: Kullanıcı adı alındı, Instagram profil sayfası yüklendi, veriler çekildi ve ayrıştırıldı.
+    Veri Gösterimi: Çekilen veriler Tkinter etiketleri üzerinde gösterildi.
+    Hata Yönetimi: Web scraping sırasında oluşabilecek hatalar için basit bir hata yönetimi eklendi.
+
+Sonuç: Uygulama, kullanıcının girdiği Instagram kullanıcı adının temel profil bilgilerini hızlı bir şekilde çekip göstermektedir. Bu tür bir araç, sosyal medya analitiği için oldukça faydalı olabilir.
 
 ![Ekran görüntüsü 2024-04-21 171629](https://github.com/arazumut/footballMachineAI-instagrambilgiAraci/assets/150933483/536553ba-d4f2-4a37-92c7-7ccf3ce3c74d)
 
