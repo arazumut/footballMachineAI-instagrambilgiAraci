@@ -11,6 +11,7 @@ Gerekli Kütüphanelerin İçe Aktarılması
 İlk adım olarak, Selenium, Scikit-Learn, Numpy ve Matplotlib gibi gerekli kütüphaneleri içe aktarıyoruz. Selenium, web scraping için kullanılırken, Scikit-Learn makine öğrenimi algoritmaları için, Numpy veri manipülasyonu için ve Matplotlib grafik çizimi için kullanılacaktır.
 SkorTahmin Sınıfı
 
+
 Bu projede, tüm işlemleri bir sınıf yapısı içinde organize ettik. SkorTahmin sınıfı, veri toplama, işleme ve tahmin yapma işlevlerini içerir.
 Tarayıcının Başlatılması ve Veri Toplama
 
