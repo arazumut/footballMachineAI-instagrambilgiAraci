@@ -9,6 +9,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
+# Produced By K.Umut Araz
+
 class SkorTahmin():
     def __init__(self):
         self.ev_Sahibi = []
