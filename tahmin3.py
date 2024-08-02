@@ -5,6 +5,8 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Produced By K. Umut Araz
+
 class SkorTahmin():
     def __init__(self):
         self.ev_Sahibi = []
