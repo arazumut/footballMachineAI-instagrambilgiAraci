@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 
 URL = "https://www.instagram.com/"
-
+# Produced By K. Umut Araz
 def verileri_al():
     kullanici_adi = kullanici_entry.get()
     son_url = URL + kullanici_adi
@@ -18,28 +18,28 @@ def verileri_al():
         veri = veri.split("-")[0]
         veri = veri.split(",")
 
-        takipci_label.config(text="Takipçi sayýsý: " + veri[0].strip())
-        takip_edilen_label.config(text="Takip edilen sayýsý: " + veri[1].strip())
-        gonderi_label.config(text="Gönderi sayýsý: " + veri[2].strip())
+        takipci_label.config(text="TakipÃ§i sayÃ½sÃ½: " + veri[0].strip())
+        takip_edilen_label.config(text="Takip edilen sayÃ½sÃ½: " + veri[1].strip())
+        gonderi_label.config(text="GÃ¶nderi sayÃ½sÃ½: " + veri[2].strip())
     except Exception as e:
         hata_label.config(text="Hata: " + str(e))
 
-# Tkinter penceresi oluþturma
+# Tkinter penceresi oluÃ¾turma
 root = tk.Tk()
-root.title("Instagram Bilgi Çekici")
+root.title("Instagram Bilgi Ã‡ekici")
 
-# Kullanýcý adý giriþ alaný
-kullanici_label = tk.Label(root, text="Kullanýcý Adý:")
+# KullanÃ½cÃ½ adÃ½ giriÃ¾ alanÃ½
+kullanici_label = tk.Label(root, text="KullanÃ½cÃ½ AdÃ½:")
 kullanici_label.grid(row=0, column=0, padx=10, pady=10, sticky=tk.W)
 
 kullanici_entry = tk.Entry(root)
 kullanici_entry.grid(row=0, column=1, padx=10, pady=10)
 
-# Bilgi çek butonu
-cek_button = tk.Button(root, text="Bilgileri Çek", command=verileri_al)
+# Bilgi Ã§ek butonu
+cek_button = tk.Button(root, text="Bilgileri Ã‡ek", command=verileri_al)
 cek_button.grid(row=1, column=0, columnspan=2, padx=10, pady=10)
 
-# Sonuç etiketleri
+# SonuÃ§ etiketleri
 takipci_label = tk.Label(root, text="")
 takipci_label.grid(row=2, column=0, columnspan=2, padx=10, pady=5, sticky=tk.W)
 
