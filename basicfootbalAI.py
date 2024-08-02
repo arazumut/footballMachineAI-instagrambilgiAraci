@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error
 veri = pd.read_csv("understat_per_game.csv")
 
 
-
+# Produced By K. Umut Araz
 
 
 print(veri.head())
