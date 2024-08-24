@@ -28,7 +28,7 @@ Toplanan veriler işlenir ve skorlar ayrıştırılır. adim1_ ve adim_2 metodla
 Skor Tahminleri
 
 Lineer regresyon modeli kullanılarak gelecekteki skor tahminleri yapılır. ev_Shabi_tahimi ve deplasman_tahmin metodları, sırasıyla ev sahibi ve deplasman takımlarının gelecekteki gol tahminlerini hesaplar. Bu tahminler, geçmiş maç sonuçlarına dayalı olarak yapılır.
-Grafiklerin Çizilmesi
+Grafiklerin Çizilmesi,
 
 Son olarak, Matplotlib kullanarak verilerin görselleştirilmesi yapılır. grafik_evsahibi_deplasman metodu, ev sahibi ve deplasman takımlarının skorlarını grafikler üzerinde gösterir. Bu grafikler, geçmiş performansların görsel bir temsilini sunar ve tahminlerin doğruluğunu değerlendirmeye yardımcı olur.
 
