@@ -5,7 +5,6 @@ from sklearn.metrics import mean_squared_error
 
 veri = pd.read_csv('understat_per_game.csv')
 
-
 veri.dropna(inplace=True)
 
 X = veri[['home_team_goal', 'away_team_goal']]
