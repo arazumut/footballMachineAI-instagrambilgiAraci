@@ -11,7 +11,7 @@ class  SkorTahmin():
     def __init__(self):
         self.ev_Sahibi = []
         self.deplasman = []
-        # Use the full path to the GeckoDriver executable
+        
         self.tarayici = webdriver.Firefox(service=webdriver.FirefoxService(r'C:\Users\arazu\Downloads\geckodriver-v0.34.0-win64\geckodriver.exe'))
         self.tarayici.get("https://istatistik.nesine.com/1573371/ozet") # => Analiz edilecek maçın istatisitikler sayfasının linkini giriniz 
         time.sleep(5)
