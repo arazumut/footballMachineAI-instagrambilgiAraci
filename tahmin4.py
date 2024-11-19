@@ -48,7 +48,7 @@ class SkorTahmin():
             else:
                 self.ev_Sahibi.append(f"{ev_Sahibi}/{skor}/{deplasman}")
 
-# Geri kalan kodları ekleyerek devam edebilirsiniz
+
 
 
 from selenium.webdriver.support.ui import WebDriverWait
