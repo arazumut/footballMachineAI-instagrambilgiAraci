@@ -33,15 +33,15 @@ class SkorTahmin():
         return {'ev_Sahibi': self.ev_Sahibi, 'deplasman': self.deplasman}
 
     def tablo_1(self):
-        # Implement data extraction from table 1
+    
         pass
 
     def tablo_2(self):
-        # Implement data extraction from table 2
+        
         pass
 
     def grafik_evsahibi_deplasman(self):
-        # Implement plot creation for predicted scores
+        
         pass
 
 if __name__ == "__main__":
