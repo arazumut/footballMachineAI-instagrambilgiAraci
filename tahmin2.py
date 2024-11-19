@@ -24,6 +24,7 @@ class  SkorTahmin():
         self.adim_2()
         self.ev_Shabi_tahimi()
         
+        
         self.deplasman_tahmin()
         self.grafik_evsahibi_deplasman()
 
