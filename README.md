@@ -23,6 +23,8 @@ Tabloların Bulunması ve İşlenmesi
 Veriler iki ayrı tabloda toplanır: Ev sahibi takım ve deplasman takımı için. Bu tabloların bulunması ve işlenmesi için tablo_1 ve tablo_2 metodları kullanılır. Bu metodlar, her iki takımın son maçlarının skorlarını çeker ve bu verileri liste olarak saklar.
 Skorların Ayrıştırılması
 
+
+
 Toplanan veriler işlenir ve skorlar ayrıştırılır. adim1_ ve adim_2 metodları, ev sahibi ve deplasman takımlarının skorlarını belirlemek için kullanılır. Bu metodlar, belirli bir takımın maç sonuçlarını filtreler ve bu sonuçları skor listelerine ekler.
 Skor Tahminleri
 
