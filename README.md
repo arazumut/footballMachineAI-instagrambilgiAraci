@@ -8,6 +8,8 @@ SkorTahmin Sınıfı: Bir Web Scraping ve Tahmin Uygulaması
 Bu makalede, Python kullanarak bir futbol maçının skorlarını tahmin eden bir programın nasıl geliştirileceğini inceleyeceğiz. Program, Selenium ile web scraping yaparak gerekli verileri toplar ve daha sonra bu veriler üzerinde makine öğrenimi algoritmaları kullanarak skor tahminleri yapar.
 Giriş
 
+
+
 Futbol maçları için skor tahmini, spor analitiği alanında oldukça popüler bir konudur. Bu makalede, belirli bir futbol maçının istatistiksel verilerini bir web sitesinden çekerek, geçmiş maç sonuçlarına dayalı olarak gelecekteki skorları tahmin eden bir Python uygulaması geliştireceğiz.
 Gerekli Kütüphanelerin İçe Aktarılması 
 
