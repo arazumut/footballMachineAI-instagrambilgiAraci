@@ -7,6 +7,7 @@ URL = "https://www.instagram.com/"
 def verileri_al():
     kullanici_adi = kullanici_entry.get()
     son_url = URL + kullanici_adi
+    
 
     request = Request(son_url, headers={"User-Agent": "Mozilla/5.0"})
     html_verisi = urlopen(request).read()
