@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 # Produced By K. Umut Araz
 
 class SkorTahmin():
-    
     def __init__(self):
         self.ev_Sahibi = []
         self.deplasman = []
