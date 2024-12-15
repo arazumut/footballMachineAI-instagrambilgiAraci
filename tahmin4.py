@@ -12,6 +12,7 @@ import time
 # Produced By K.Umut Araz
 
 class SkorTahmin():
+    
     def __init__(self):
         self.ev_Sahibi = []
         self.deplasman = []
