@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 # Produced By K. Umut Araz
 
-class SkorTahmin():
+class SkorTahmin:
     def __init__(self):
         self.ev_Sahibi = []
         self.deplasman = []
@@ -18,12 +18,12 @@ class SkorTahmin():
         self.data = self.extract_data()  # Combine data extraction into a single method
 
         self.model = LinearRegression()
-        self.model.fit(self.data['ev_Sahibi'], self.data['deplasman'])
+        self.model.fit(np.array(self.data['ev_Sahibi']).reshape(-1, 1), np.array(self.data['deplasman']).reshape(-1, 1))
 
         self.tarayici.close()
 
-        self.ev_sahibi_Skor = self.model.predict(self.data['ev_Sahibi'])
-        self.deplasman_skor = self.model.predict(self.data['deplasman'])
+        self.ev_sahibi_Skor = self.model.predict(np.array(self.data['ev_Sahibi']).reshape(-1, 1))
+        self.deplasman_skor = self.model.predict(np.array(self.data['deplasman']).reshape(-1, 1))
 
         self.grafik_evsahibi_deplasman()
 
@@ -33,15 +33,15 @@ class SkorTahmin():
         return {'ev_Sahibi': self.ev_Sahibi, 'deplasman': self.deplasman}
 
     def tablo_1(self):
-    
+        # Implement the logic for extracting the first table
         pass
 
     def tablo_2(self):
-        
+        # Implement the logic for extracting the second table
         pass
 
     def grafik_evsahibi_deplasman(self):
-        
+        # Implement the logic for plotting the scores comparison
         pass
 
 if __name__ == "__main__":
