@@ -24,13 +24,13 @@ class SkorTahmin:
         except Exception as e:
             print(f"Error initializing WebDriver or fetching data: {e}")
         finally:
-            self.tarayici.close()
+            self.tarayici.quit()
         
         self.ev_sahibi_Skor = []
         self.deplasman_skor = []
         self.adim1_()
         self.adim_2()
-        self.ev_Shabi_tahimi()
+        self.ev_sahibi_tahmini()
         self.deplasman_tahmin()
         self.grafik_evsahibi_deplasman()
     
@@ -41,16 +41,16 @@ class SkorTahmin:
         try:
             birinci_takim = self.tablolar_()
             birinci_takim = birinci_takim.find_element(By.CSS_SELECTOR, '[data-test-id="LastMatchesTableFirst"]')
-            birinci_takim_Adi = birinci_takim.find_element(By.TAG_NAME, "a").get_attribute("text")
-            self.ev_Sahibi.append(birinci_takim_Adi)
+            birinci_takim_adi = birinci_takim.find_element(By.TAG_NAME, "a").get_attribute("text")
+            self.ev_Sahibi.append(birinci_takim_adi)
             skorlar = birinci_takim.find_element(By.CSS_SELECTOR, '[data-test-id="LastMatchesTable"]').find_element(By.TAG_NAME, 'tbody').find_elements(By.TAG_NAME, 'tr')
             for i in skorlar:
                 kontrol = i.find_element(By.CSS_SELECTOR, '[data-test-id="TableBodyMatch"]')
-                ev_Sahibi = kontrol.find_element(By.CSS_SELECTOR, '[data-test-id="HomeTeam"]').text
+                ev_sahibi = kontrol.find_element(By.CSS_SELECTOR, '[data-test-id="HomeTeam"]').text
                 deplasman = kontrol.find_element(By.CSS_SELECTOR, '[data-test-id="AwayTeam"]').text
                 skor = kontrol.find_element(By.CSS_SELECTOR, '[data-testid="nsn-button"]').find_element(By.TAG_NAME, "span").text
                 if skor:
-                    self.ev_Sahibi.append(f"{ev_Sahibi}/{skor}/{deplasman}")
+                    self.ev_Sahibi.append(f"{ev_sahibi}/{skor}/{deplasman}")
         except Exception as e:
             print(f"Error extracting table 1: {e}")
 
@@ -58,29 +58,29 @@ class SkorTahmin:
         try:
             ikinci_takim = self.tablolar_()
             ikinci_takim = ikinci_takim.find_element(By.CSS_SELECTOR, '[data-test-id="LastMatchesTableSecond"]')
-            ikinci_takim_Adi = ikinci_takim.find_element(By.TAG_NAME, "a").get_attribute("text")
-            self.deplasman.append(ikinci_takim_Adi)
+            ikinci_takim_adi = ikinci_takim.find_element(By.TAG_NAME, "a").get_attribute("text")
+            self.deplasman.append(ikinci_takim_adi)
             skorlar = ikinci_takim.find_element(By.CSS_SELECTOR, '[data-test-id="LastMatchesTable"]').find_element(By.TAG_NAME, 'tbody').find_elements(By.TAG_NAME, 'tr')
             for i in skorlar:
                 kontrol = i.find_element(By.CSS_SELECTOR, '[data-test-id="TableBodyMatch"]')
-                ev_Sahibi = kontrol.find_element(By.CSS_SELECTOR, '[data-test-id="HomeTeam"]').text
+                ev_sahibi = kontrol.find_element(By.CSS_SELECTOR, '[data-test-id="HomeTeam"]').text
                 deplasman = kontrol.find_element(By.CSS_SELECTOR, '[data-test-id="AwayTeam"]').text
                 skor = kontrol.find_element(By.CSS_SELECTOR, '[data-testid="nsn-button"]').find_element(By.TAG_NAME, "span").text
                 if skor:
-                    self.deplasman.append(f"{ev_Sahibi}/{skor}/{deplasman}")
+                    self.deplasman.append(f"{ev_sahibi}/{skor}/{deplasman}")
         except Exception as e:
             print(f"Error extracting table 2: {e}")
 
     def adim1_(self):
         for i in self.ev_Sahibi[1:]:
             try:
-                ayır = str(i).split("/")
-                indexi = ayır.index(self.ev_sahibi_takim)
+                ayir = str(i).split("/")
+                indexi = ayir.index(self.ev_sahibi_takim)
                 if indexi == 0:
-                    t = ayır[1].split("-")[0].strip()
+                    t = ayir[1].split("-")[0].strip()
                     self.ev_sahibi_Skor.append(t)
                 elif indexi == 2:
-                    t = ayır[1].split("-")[1].strip()
+                    t = ayir[1].split("-")[1].strip()
                     self.ev_sahibi_Skor.append(t)
             except ValueError:
                 continue
@@ -88,16 +88,16 @@ class SkorTahmin:
     def adim_2(self):
         for i in self.deplasman[1:]:
             try:
-                ayır = str(i).split("/")
-                indexi = ayır.index(self.deplasman_takim)
+                ayir = str(i).split("/")
+                indexi = ayir.index(self.deplasman_takim)
                 if indexi == 0:
-                    t = ayır[1].split("-")[0].strip()
+                    t = ayir[1].split("-")[0].strip()
                     try:
                         self.deplasman_skor.append(int(t))
                     except ValueError:
                         pass
                 elif indexi == 2:
-                    t = ayır[1].split("-")[1].strip()
+                    t = ayir[1].split("-")[1].strip()
                     try:
                         self.deplasman_skor.append(int(t))
                     except ValueError:
@@ -105,7 +105,7 @@ class SkorTahmin:
             except ValueError:
                 continue
 
-    def ev_Shabi_tahimi(self):
+    def ev_sahibi_tahmini(self):
         veri_kumesi = np.array(self.ev_sahibi_Skor[::-1]).reshape(-1, 1)
         x = np.arange(len(veri_kumesi)).reshape(-1, 1)
         model = LinearRegression()
