@@ -20,7 +20,7 @@ class SkorTahmin:
         self.model = LinearRegression()
         self.model.fit(np.array(self.data['ev_Sahibi']).reshape(-1, 1), np.array(self.data['deplasman']).reshape(-1, 1))
 
-        self.tarayici.close()
+        self.tarayici.quit()
 
         self.ev_sahibi_Skor = self.model.predict(np.array(self.data['ev_Sahibi']).reshape(-1, 1))
         self.deplasman_skor = self.model.predict(np.array(self.data['deplasman']).reshape(-1, 1))
@@ -41,8 +41,13 @@ class SkorTahmin:
         pass
 
     def grafik_evsahibi_deplasman(self):
-        # Implement the logic for plotting the scores comparison
-        pass
+        plt.subplot(1, 2, 1)
+        plt.title("Ev Sahibi Goller", loc='left')
+        plt.plot(self.ev_sahibi_Skor, color="red")
+        plt.subplot(1, 2, 2)
+        plt.title("Deplasman Goller", loc='left')
+        plt.plot(self.deplasman_skor, color="green")
+        plt.show()
 
 if __name__ == "__main__":
     tahmin = SkorTahmin()
