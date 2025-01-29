@@ -30,6 +30,7 @@ Veriler iki ayrı tabloda toplanır: Ev sahibi takım ve deplasman takımı içi
 
 ### Skorların Ayrıştırılması
 
+
 Toplanan veriler işlenir ve skorlar ayrıştırılır. `adim1_` ve `adim_2` metodları, ev sahibi ve deplasman takımlarının skorlarını belirlemek için kullanılır. Bu metodlar, belirli bir takımın maç sonuçlarını filtreler ve bu sonuçları skor listelerine ekler.
 
 ### Skor Tahminleri
