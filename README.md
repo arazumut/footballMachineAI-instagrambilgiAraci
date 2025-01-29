@@ -11,6 +11,7 @@ Bu makalede, Python kullanarak bir futbol maçının skorlarını tahmin eden bi
 
 Futbol maçları için skor tahmini, spor analitiği alanında oldukça popüler bir konudur. Bu makalede, belirli bir futbol maçının istatistiksel verilerini bir web sitesinden çekerek, geçmiş maç sonuçlarına dayalı olarak gelecekteki skorları tahmin eden bir Python uygulaması geliştireceğiz.
 
+
 ## Gerekli Kütüphanelerin İçe Aktarılması 
 
 İlk adım olarak, Selenium, Scikit-Learn, Numpy ve Matplotlib gibi gerekli kütüphaneleri içe aktarıyoruz. Selenium, web scraping için kullanılırken, Scikit-Learn makine öğrenimi algoritmaları için, Numpy veri manipülasyonu için ve Matplotlib grafik çizimi için kullanılacaktır.
