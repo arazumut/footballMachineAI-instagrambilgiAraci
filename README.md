@@ -9,6 +9,7 @@ Bu makalede, Python kullanarak bir futbol maçının skorlarını tahmin eden bi
 
 ## Giriş
 
+
 Futbol maçları için skor tahmini, spor analitiği alanında oldukça popüler bir konudur. Bu makalede, belirli bir futbol maçının istatistiksel verilerini bir web sitesinden çekerek, geçmiş maç sonuçlarına dayalı olarak gelecekteki skorları tahmin eden bir Python uygulaması geliştireceğiz.
 
 
